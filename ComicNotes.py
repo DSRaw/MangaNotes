@@ -13,9 +13,6 @@ class LabeledTextCtrl(wx.TextCtrl):
         self.sizer = wx.StaticBoxSizer(wx.HORIZONTAL, self.GetParent(), label)
         self.sizer.Add(self, text_control_flags)
 
-    def SetBadge(self, badge):
-        self.sizer.label = "foo"
-
 class Test(wx.Frame):
     def __init__(self):
         super().__init__(parent=None, title='Notes')
