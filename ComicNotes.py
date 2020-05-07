@@ -10,9 +10,7 @@ import wx
 class LabeledTextCtrl(wx.TextCtrl):
     def __init__(self, label, text_control_flags, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        #self.ctrl_label = wx.StaticText(self.GetParent())
         self.sizer = wx.StaticBoxSizer(wx.HORIZONTAL, self.GetParent(), label)
-        #self.sizer.Add(self.ctrl_label, 0, wx.LEFT)
         self.sizer.Add(self, text_control_flags)
 
     def SetBadge(self, badge):
